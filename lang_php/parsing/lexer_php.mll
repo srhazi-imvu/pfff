@@ -933,8 +933,7 @@ and initial = parse
       T_OPEN_TAG_WITH_ECHO(tokinfo lexbuf);
     }
 
-  | "<?" | "<script" WHITESPACE+ "language" WHITESPACE* "=" WHITESPACE * 
-           ("php"|"\"php\""|"\'php\'") WHITESPACE*">" 
+  | "<?"
      {
        (* XXX if short_tags normally otherwise T_INLINE_HTML *)
        (* pr2 "BAD USE OF <? at initial state, replace by <?php"; *)
